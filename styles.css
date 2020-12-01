@@ -10,6 +10,7 @@ body{
     background-size: cover;
     text-align: center;
     min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* header */
@@ -34,3 +35,14 @@ body{
 /* tomagotchi */
 
 /* activeButtons */
+.bottom{
+    position: absolute;
+    bottom: 5%;
+
+    position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+}
