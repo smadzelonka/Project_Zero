@@ -11,9 +11,13 @@ body{
     text-align: center;
     min-height: 100vh;
     font-family: 'Press Start 2P', cursive;
+    color: #d4cece;
 }
 
 /* header */
+h1 {
+    font-size: 50px;
+}
 
 /* displaybar */
 .displayBar{
@@ -33,6 +37,27 @@ body{
 }
 
 /* tomagotchi */
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.image_Container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.image{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 /* activeButtons */
 .bottom{
@@ -40,9 +65,9 @@ body{
     bottom: 5%;
 
     position: absolute;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
