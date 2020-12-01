@@ -1,6 +1,5 @@
 # ProtectZero
-test
-#User stories
+## User stories
 1. create four progress bars with descripts in the nav
     1. Health, Hunger, Thirst, emotion
         1. health shall decay based on time
@@ -10,6 +9,11 @@ test
 2. create a prompt alert to be able to gather name of animation
     1. display name of animation in header center replacing the tomagtchi name
 3. 
+## project goal to mimic
+![tomagotchi](images/tamagotchi.webp)
 
-##wireframes
+
+## wireframes
 ![wireone](wirefirms/opT4rEsqQBqrG4Q5vDka73.png)
+![gameplay](https://share.balsamiq.com/c/axcCqmg85NRRSbaFSmQL5J.png)
+![Game over](https://share.balsamiq.com/c/Aqu9tmhJxoKweWkTgTQZ4.png)
