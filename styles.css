@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d4cece;
+    background-image: url(images/cyberpunk-street-files/PNG/cyberpunk-street.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* header */
+
+/* displaybar */
+.displayBar{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+}
+.displayIndex{
+    margin: 0 5%;
+}
+
+.nes-progress{
+    max-width: 75%;
+    width: 150px;
+}
+
+/* tomagotchi */
+
+/* activeButtons */
