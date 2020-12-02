@@ -9,29 +9,42 @@
 // 3. 
 
 
-/* functions */
+/* ===functions=== */
 const handleClick = function handleClick(event){
     const $target = $(event.target)
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
-    }else if ($target.hasClass("attetion liquid")){
+        console.log("You've been submited")
+    }else if ($target.hasClass("liquid")){
         console.log("Water please")
-    }else if($target.hasClass("attetion love")){
+    }else if($target.hasClass("love")){
         console.log("i need love")
-    }else if($target.hasClass("attetion feed")){
-        console.log("why cant you make a snadwhich")
+    }else if($target.hasClass("feed")){
+        console.log("why cant you make a sandwhich")
     }else {
         console.log("that just happened")
     }
 }
 
-/* Use jquery to create an input for name*/
-// $("#nameId").on("click",function(event){
-//     $(".nes-field").attr("id", "nameIdDiv")
-// });
 
-/* event listener */
+/* ===event listener=== */
 $(".nes-btn").on("click",handleClick);
 // used nes-btn over attetion class
 
 
+
+// var textValue = $("input[type=text]").val()
+
+
+    $('.input').on('submit', function(e) { //use on if jQuery 1.7+
+        e.preventDefault();  //prevent form from submitting
+        // var data = $(".input").val()
+        const inputValue = $(".nes-input").val()
+        console.log(inputValue); //use the console for debugging, F12 in Chrome, not alerts
+    });
+
+// buttons to change inputs
+// submit to change name
+// decay of health
+
+// add anmations end game
