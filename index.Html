@@ -24,11 +24,11 @@
     <nav class="displayBar">
         <div class="health displayIndex">
             <label for="health_bar">Health</label>
-            <progress class="nes-progress is-pattern" value="50" max="100"></progress>
+            <progress class="nes-progress is-pattern" value="1" max="100"></progress>
         </div>
         <div class="hunger displayIndex">
             <label for="hunger">Hunger</label>
-            <progress class="nes-progress is-success" value="50" max="100"></progress>
+            <progress id="foodBar" class="nes-progress is-success" value="10" max="100"></progress>
         </div>
         <!-- header embedded -->
         <header>
@@ -36,11 +36,11 @@
         </header>
         <div class="thirst displayIndex">
             <label for="thirst_bar">Thirst</label> 
-            <progress class="nes-progress is-primary" value="80" max="100"></progress>
+            <progress id="drinkBar" class="nes-progress is-primary" value="10" max="100"></progress>
         </div>
         <div class="emotion displayIndex">
             <label for="emotion_bar">Emotion</label>
-            <progress class="nes-progress is-error" value="50" max="100"></progress>
+            <progress class="nes-progress is-error emotionalBar" value="10" max="100"></progress>
         </div>
     </nav> 
     <!-- tomagotchi unit -->
@@ -60,9 +60,9 @@
 
     <!-- actions -->
     <footer class="bottom">
-        <button type="button" class="nes-btn is-success attetion feed">Feed him!</button>
-        <button type="button" class="nes-btn is-primary attetion liquid">Give the Liquids</button>
-        <button type="button" class="nes-btn is-error attetion love">Give Attetion</button>
+        <button type="button" class="nes-btn is-success feed">Feed him!</button>
+        <button type="button" class="nes-btn is-primary liquid">Give the Liquids</button>
+        <button type="button" class="nes-btn is-error love">Give Attetion</button>
     </footer>
 </body>
 </html>

@@ -17,34 +17,68 @@ const handleClick = function handleClick(event){
         console.log("You've been submited")
     }else if ($target.hasClass("liquid")){
         console.log("Water please")
+        thirstButton()
     }else if($target.hasClass("love")){
         console.log("i need love")
+        emotionButton() 
     }else if($target.hasClass("feed")){
         console.log("why cant you make a sandwhich")
+        feedButton()
     }else {
         console.log("that just happened")
     }
 }
 
+const feedButton = function feedButton(){
+    let foodValue = $("#foodBar").val();
+    let newFoodValue = Number(foodValue) + 5;
+    $("#foodBar").val(newFoodValue);
+}
+const thirstButton = function thirstButton(){
+    let thirstValue = $("#drinkBar").val();
+    let newThirstValue = Number(thirstValue) + 5;
+    $("#drinkBar").val(newThirstValue);
+}
+
+const emotionButton = function emotionButton(){
+    let emotionalValue = $(".emotionalBar").val();
+    let newEmotionalValue = Number(emotionalValue) + 5;
+    $(".emotionalBar").val(newEmotionalValue);
+}
+
+const handleSubmit =function handleSubmit(e){
+    e.preventDefault();
+    const inputValue = $(".nes-input").val()
+    $("h1").text(inputValue)
+    console.log(inputValue);
+}
 
 /* ===event listener=== */
 $(".nes-btn").on("click",handleClick);
-// used nes-btn over attetion class
+// need to move submit from handleclick
+$('.input').on('submit', handleSubmit);
+
+// buttons to change inputs-
+// submit to change name-
 
 
 
-// var textValue = $("input[type=text]").val()
-
-
-    $('.input').on('submit', function(e) { //use on if jQuery 1.7+
-        e.preventDefault();  //prevent form from submitting
-        // var data = $(".input").val()
-        const inputValue = $(".nes-input").val()
-        console.log(inputValue); //use the console for debugging, F12 in Chrome, not alerts
-    });
-
-// buttons to change inputs
-// submit to change name
 // decay of health
+/* let time = 30;
+const setTimer = function setTimer(){
+
+const updateTime = function updateTime() {
+console.log("Timer!", time);
+$("#timer").text(`Timer: ${time}s`)
+time--;
+    if(time <= 0){
+        clearInterval(timer);
+        round++
+        $("#round").text(`Round: ${round}`)
+        if (round <= 4) setUpRound()
+    }
+}
+const timer = setInterval(updateTime, 1000)
+} */
 
 // add anmations end game
