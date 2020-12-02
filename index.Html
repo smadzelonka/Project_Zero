@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Displaybar -->
     <nav class="displayBar">
         <div class="health displayIndex">
@@ -39,11 +40,18 @@
         </div>
         <div class="emotion displayIndex">
             <label for="emotion_bar">Emotion</label>
-            <progress class="nes-progress is-error" value="10" max="100"></progress>
+            <progress class="nes-progress is-error" value="50" max="100"></progress>
         </div>
     </nav> 
     <!-- tomagotchi unit -->
     <section>
+        <!-- input -->
+        <div class="nes-field input">
+            <label for="name_field">Your Pet's name</label>
+            <input type="text" id="name_field" class="nes-input">
+            <a class="nes-btn" href="#" id="nameId">Submit</a>
+        </div>
+        <!-- input end -->
             <div class="image_Container">
                 <img class="image" src="images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-idle.gif" alt="Hell-Beast">
             </div>

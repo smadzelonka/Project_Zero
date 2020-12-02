@@ -19,6 +19,17 @@ h1 {
     font-size: 50px;
 }
 
+.input{
+    max-width: 40%;
+    margin: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
 /* displaybar */
 .displayBar{
     display: flex;
@@ -44,6 +55,10 @@ section{
     text-align: center; 
 }
 
+#nameIdDiv{
+    display:none;
+}
+
 .image_Container{
     width: 100%;
     display: flex;
@@ -61,9 +76,7 @@ section{
 
 /* activeButtons */
 .bottom{
-    position: absolute;
     bottom: 5%;
-
     position: absolute;
     margin-left: auto;
     margin-right: auto;
