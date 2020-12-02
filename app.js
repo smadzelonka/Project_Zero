@@ -8,6 +8,20 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
+// values
+const $health = $("#healthBar")
+const $hunger = $("#foodBar")
+const $thirst = $("#drinkBar")
+const $emotion = $(".emotionalBar")
+
+// pet
+const pet = {
+    "health": $health.val(),
+    "hunger": $hunger.val(),
+    "thirst": $thirst.val(),
+    "emotion": $emotion.val(),
+}
+
 
 /* ===functions=== */
 const handleClick = function handleClick(event){
@@ -15,6 +29,7 @@ const handleClick = function handleClick(event){
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
         console.log("You've been submited")
+        decayTime()
     }else if ($target.hasClass("liquid")){
         console.log("Water please")
         thirstButton()
@@ -29,21 +44,40 @@ const handleClick = function handleClick(event){
     }
 }
 
+
 const feedButton = function feedButton(){
-    let foodValue = $("#foodBar").val();
+/*     let foodValue = $("#foodBar").val();
     let newFoodValue = Number(foodValue) + 5;
-    $("#foodBar").val(newFoodValue);
+    $("#foodBar").val(newFoodValue); */
+    pet.hunger += 5;
+    $hunger.val(pet.hunger)
+    pet.emotion -= .5;
+    $emotion.val(pet.emotion)
+    pet.thirst -= .1;
+    $thirst.val(pet.thirst)
 }
 const thirstButton = function thirstButton(){
-    let thirstValue = $("#drinkBar").val();
+/*     let thirstValue = $("#drinkBar").val();
     let newThirstValue = Number(thirstValue) + 5;
-    $("#drinkBar").val(newThirstValue);
+    $("#drinkBar").val(newThirstValue); */
+    pet.thirst += 5;
+    $thirst.val(pet.thirst)
+    pet.emotion -= .1;
+    $emotion.val(pet.emotion)
+    pet.hunger -= .5;
+    $hunger.val(pet.hunger)
 }
 
 const emotionButton = function emotionButton(){
-    let emotionalValue = $(".emotionalBar").val();
+/*     let emotionalValue = $(".emotionalBar").val();
     let newEmotionalValue = Number(emotionalValue) + 5;
-    $(".emotionalBar").val(newEmotionalValue);
+    $(".emotionalBar").val(newEmotionalValue); */
+    pet.emotion += 5;
+    $emotion.val(pet.emotion)
+    pet.thirst -= .5;
+    $thirst.val(pet.thirst)
+    pet.hunger -= 1;
+    $hunger.val(pet.hunger)
 }
 
 const handleSubmit =function handleSubmit(e){
@@ -58,27 +92,20 @@ $(".nes-btn").on("click",handleClick);
 // need to move submit from handleclick
 $('.input').on('submit', handleSubmit);
 
-// buttons to change inputs-
-// submit to change name-
-
 
 
 // decay of health
-/* let time = 30;
-const setTimer = function setTimer(){
+const decayTime = function decayTime(){
+    let HealthTimer = setInterval(() => {
+        pet.health++
+        $health.val(pet.health)
 
-const updateTime = function updateTime() {
-console.log("Timer!", time);
-$("#timer").text(`Timer: ${time}s`)
-time--;
-    if(time <= 0){
-        clearInterval(timer);
-        round++
-        $("#round").text(`Round: ${round}`)
-        if (round <= 4) setUpRound()
-    }
+        if (pet.health >= 100) {
+        clearInterval(HealthTimer);
+        console.log("game over");
+        }
+    }, 1000);
 }
-const timer = setInterval(updateTime, 1000)
-} */
+
 
 // add anmations end game
