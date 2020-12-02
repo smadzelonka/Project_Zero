@@ -8,21 +8,37 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
-{/* <div class="nes-field">
-  <label for="name_field">Your name</label>
-  <input type="text" id="name_field" class="nes-input">
-</div> */}
+
+
+const handleClick = function handleClick(event){
+    const $target = $(event.target)
+    if($target.hasClass("attetion")){
+        console.log("hey stop clicking me")
+    }else if (attr){
+
+    }else if(attr){
+
+    }else if(attr){
+
+    }else {
+        console.log("that just happened")
+    }
+
+}
 
 /* Use jquery to create an input for name*/
 $("#nameId").on("click",function(event){
     $(".nes-field").attr("id", "nameIdDiv")
 });
-$(".nes-btn ").on("click",function(event){
-    console.log("Ive been clicked");
-});
+
+/* event listener */
+$(".attetion").on("click",handleClick);
 
 
 
+
+
+/* attempt to create submit with jqruey was unable to create event on */
 // const name = function askName(){
 //     $("section").prepend(`<div class="nes-field input">
 //     <label for="name_field">Your Pet's name</label>
