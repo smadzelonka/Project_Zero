@@ -9,44 +9,29 @@
 // 3. 
 
 
-
+/* functions */
 const handleClick = function handleClick(event){
     const $target = $(event.target)
-    if($target.hasClass("attetion")){
-        console.log("hey stop clicking me")
-    }else if (attr){
-
-    }else if(attr){
-
-    }else if(attr){
-
+    if($target.hasClass("submit")){
+        $(".nes-field").attr("id", "nameIdDiv")
+    }else if ($target.hasClass("attetion liquid")){
+        console.log("Water please")
+    }else if($target.hasClass("attetion love")){
+        console.log("i need love")
+    }else if($target.hasClass("attetion feed")){
+        console.log("why cant you make a snadwhich")
     }else {
         console.log("that just happened")
     }
-
 }
 
 /* Use jquery to create an input for name*/
-$("#nameId").on("click",function(event){
-    $(".nes-field").attr("id", "nameIdDiv")
-});
+// $("#nameId").on("click",function(event){
+//     $(".nes-field").attr("id", "nameIdDiv")
+// });
 
 /* event listener */
-$(".attetion").on("click",handleClick);
+$(".nes-btn").on("click",handleClick);
+// used nes-btn over attetion class
 
 
-
-
-
-/* attempt to create submit with jqruey was unable to create event on */
-// const name = function askName(){
-//     $("section").prepend(`<div class="nes-field input">
-//     <label for="name_field">Your Pet's name</label>
-//     <input type="text" id="name_field" class="nes-input">
-// <a class="nes-btn" href="#">Submit</a></div>`)
-// } 
-// $("body").ready(name)
-// // working on
-// $("#hide").click(function(){
-//     $(".input").hide();
-// });
