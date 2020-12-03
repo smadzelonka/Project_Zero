@@ -110,14 +110,16 @@ const gameTime = function gameTime(){
         }
         if(pet.thirst === 100 || pet.hunger === 100 || pet.emotion === 100){
         endGame()
+        $("section").append(`<img class='endGame' src='images/gameover.gif'>`)
         clearInterval(HealthTimer);
         }
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         endGame()
+        $("section").append(`<img class='endGame' src='images/winText.png'>`)
         }
-    }, 400);
+    }, 200);
 }
 
 
@@ -125,6 +127,7 @@ const gameTime = function gameTime(){
 
 const earlyGame = function earlyGame(){
 $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-idle.gif")
+$("img").removeClass("egg")
 }
 
 const midGame = function midGame(){
@@ -132,9 +135,8 @@ $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GI
 }
 
 const endGame = function endGame(){
-    $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif")
-    $("section").append("<img class='endGame' src='images/gameover.gif'>")
-    console.log("game over");
+    $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif") 
+    console.log("game over"); 
 }
 
 const gameDecay = function gameDecay(){

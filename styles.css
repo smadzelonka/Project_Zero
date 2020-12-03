@@ -63,6 +63,8 @@ section{
     display:none;
 }
 
+
+
 .image_Container{
     width: 100%;
     display: flex;
@@ -83,6 +85,11 @@ section{
     justify-content: center;
 }
 
+.win {
+    width: 600px;
+}
+
+
 /* activeButtons */
 .bottom{
     bottom: 3%;
@@ -96,6 +103,10 @@ section{
 
 .nes-btn{
     font-family: 'Press Start 2P', cursive;
+}
+
+.egg{
+    width: 20%;
 }
 
 /* preGame */
