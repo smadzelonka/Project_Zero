@@ -1,5 +1,6 @@
 # ProtectZero
 ## User stories
+The goal of this game is to be able to create your own monster that will destory the world.  Your job is take care of the monster so you can live to fight another day.
 1. create four progress bars with descripts in the nav
     1. Health, Hunger, Thirst, emotion
         1. health shall decay based on time
@@ -8,7 +9,6 @@
             1. Hunger Thirst and emotion shell give a point to health at 100 win condition will be met and animation will destory world
 2. create a prompt alert to be able to gather name of animation
     1. display name of animation in header center replacing the tomagtchi name
-3. 
 ## project goal to mimic
 ![tomagotchi](images/tamagotchi.webp)
 

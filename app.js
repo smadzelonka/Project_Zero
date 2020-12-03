@@ -47,7 +47,7 @@ const handleClick = function handleClick(event){
 
 const handleKeys = function handleKeys(e){
     var key = (e.key)
-    // used cvb for easy access
+    // used 123 for easy access
     if(key === "1"){
         feedButton()
     }else if(key === "2"){
@@ -61,37 +61,28 @@ const handleKeys = function handleKeys(e){
 
 
 const foodDecay = function foodDecay(){
-    pet.hunger += 1.5;
+    pet.hunger += 2.5;
     $hunger.val(pet.hunger)
 }
 const thirstDecay = function thirstDecay(){
-    pet.thirst += 1.5;
+    pet.thirst += 2.5;
     $thirst.val(pet.thirst)
 }
 const emotionDecay = function emotionalDecay(){
-    pet.emotion += 1.5;
+    pet.emotion += 2.5;
     $emotion.val(pet.emotion)
 }
 
 const feedButton = function feedButton(){
-/*     let foodValue = $("#foodBar").val();
-    let newFoodValue = Number(foodValue) + 5;
-    $("#foodBar").val(newFoodValue); */
     pet.hunger -= 5;
     $hunger.val(pet.hunger)
 }
 const thirstButton = function thirstButton(){
-/*     let thirstValue = $("#drinkBar").val();
-    let newThirstValue = Number(thirstValue) + 5;
-    $("#drinkBar").val(newThirstValue); */
     pet.thirst -= 5;
     $thirst.val(pet.thirst)
 }
 
 const emotionButton = function emotionButton(){
-/*     let emotionalValue = $(".emotionalBar").val();
-    let newEmotionalValue = Number(emotionalValue) + 5;
-    $(".emotionalBar").val(newEmotionalValue); */
     pet.emotion -= 5;
     $emotion.val(pet.emotion)
 }
@@ -108,7 +99,7 @@ $(".nes-btn").on("click",handleClick);
 // need to move submit from handleclick
 $('.input').on('submit', handleSubmit);
 // handlesKey
-$('body').on( "keydown", handleKeys )
+$('body').on( "keydown", handleKeys );
 
 
 // Game Time
