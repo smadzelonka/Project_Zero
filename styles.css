@@ -58,6 +58,9 @@ section{
     width: 100vw;
     height: 90vh;
 }
+span{
+    font-size: 3rem;
+}
 
 #nameIdDiv{
     display:none;
@@ -91,8 +94,26 @@ section{
 }
 
 @keyframes run {
-  0% { margin-left: -98%;}
-  100%{ margin-left: 0%;}
+    0% { margin-left: -98%;}
+    100%{ margin-left: 0%;}
+}
+
+
+/* Test */
+.egg {
+    animation-name            : fade      , shrink    ;
+    animation-duration        : 0.5s      , 0.53s     ;
+    animation-iteration-count : infinite  , infinite  ;
+    animation-direction       : alternate , alternate ;
+    width: 20%;
+}
+@keyframes fade {
+    from { opacity   : 1; }
+    to   { opacity   : 0.25; }
+}
+@keyframes shrink {
+    from { transform : scale(1); }
+    to   { transform : scale(0.75); }
 }
 
 /* activeButtons */
@@ -110,9 +131,6 @@ section{
     font-family: 'Press Start 2P', cursive;
 }
 
-.egg{
-    width: 20%;
-}
 
 /* preGame */
 
