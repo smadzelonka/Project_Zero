@@ -22,11 +22,11 @@
 
     <!-- Displaybar -->
     <nav class="displayBar">
-        <div class="health displayIndex">
+        <div class="health displayIndex hidden">
             <label for="health_bar">Health</label>
             <progress id="healthBar" class="nes-progress is-pattern" value="1" max="100"></progress>
         </div>
-        <div class="hunger displayIndex">
+        <div class="hunger displayIndex hidden">
             <label for="hunger">Hunger</label>
             <progress id="foodBar" class="nes-progress is-success" value="10" max="100"></progress>
         </div>
@@ -34,12 +34,12 @@
         <header>
             <h1>Tomagotchi</h1>
         </header>
-        <div class="thirst displayIndex">
-            <label for="thirst_bar">Thirst</label> 
-            <progress id="drinkBar" class="nes-progress is-primary" value="10" max="100"></progress>
+        <div class="thirst displayIndex hidden">
+            <label for="thirst_bar" >Thirst</label> 
+            <progress id="drinkBar" class="nes-progress is-primary hidden" value="10" max="100"></progress>
         </div>
-        <div class="emotion displayIndex">
-            <label for="emotion_bar">Emotion</label>
+        <div class="emotion displayIndex hidden">
+            <label for="emotion_bar" >Emotion</label>
             <progress class="nes-progress is-error emotionalBar" value="10" max="100"></progress>
         </div>
     </nav> 
@@ -52,14 +52,14 @@
             <button id="nameId" class="nes-btn is-warning submit" type="submit">Submit</button>
         </form>
         <!-- input end -->
-            <div class="image_Container">
+            <div class="image_Container hidden">
                 <img class="image" src="images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-idle.gif" alt="Hell-Beast">
             </div>
 
     </section>
 
     <!-- actions -->
-    <footer class="bottom">
+    <footer class="bottom hidden">
         <button type="button" class="nes-btn is-success feed">Feed him!</button>
         <button type="button" class="nes-btn is-primary liquid">Give the Liquids</button>
         <button type="button" class="nes-btn is-error love">Give Attetion</button>

@@ -28,6 +28,7 @@ h1 {
     margin-right: auto;
     left: 0;
     right: 0;
+    bottom: 50;
     text-align: center;
 }
 
@@ -54,6 +55,8 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center; 
+    width: 100vw;
+    height: 90vh;
 }
 
 #nameIdDiv{
@@ -89,4 +92,10 @@ section{
     left: 0;
     right: 0;
     text-align: center;
+}
+
+/* preGame */
+
+.hidden {
+    display: none;
 }

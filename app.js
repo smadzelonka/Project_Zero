@@ -29,7 +29,7 @@ const handleClick = function handleClick(event){
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
         console.log("You've been submited")
-        decayTime()
+        gameTime()
     }else if ($target.hasClass("liquid")){
         console.log("Water please")
         thirstButton()
@@ -62,14 +62,14 @@ const feedButton = function feedButton(){
 /*     let foodValue = $("#foodBar").val();
     let newFoodValue = Number(foodValue) + 5;
     $("#foodBar").val(newFoodValue); */
-    pet.hunger += 5;
+    pet.hunger -= 5;
     $hunger.val(pet.hunger)
 }
 const thirstButton = function thirstButton(){
 /*     let thirstValue = $("#drinkBar").val();
     let newThirstValue = Number(thirstValue) + 5;
     $("#drinkBar").val(newThirstValue); */
-    pet.thirst += 5;
+    pet.thirst -= 5;
     $thirst.val(pet.thirst)
 }
 
@@ -77,7 +77,7 @@ const emotionButton = function emotionButton(){
 /*     let emotionalValue = $(".emotionalBar").val();
     let newEmotionalValue = Number(emotionalValue) + 5;
     $(".emotionalBar").val(newEmotionalValue); */
-    pet.emotion += 5;
+    pet.emotion -= 5;
     $emotion.val(pet.emotion)
 }
 
@@ -96,10 +96,14 @@ $('.input').on('submit', handleSubmit);
 
 
 // decay of health
-const decayTime = function decayTime(){
+const gameTime = function gameTime(){
     let HealthTimer = setInterval(() => {
         pet.health++
         gameDecay()
+        if(pet.thirst === 100 || pet.hunger === 100 || pet.emotion === 100){
+        endGame()
+        clearInterval(HealthTimer);
+        }
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
@@ -121,3 +125,5 @@ const gameDecay = function gameDecay(){
     emotionDecay();
     thirstDecay();
 }
+
+// global runs
