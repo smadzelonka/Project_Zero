@@ -81,7 +81,10 @@ span{
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: run ease 3s;
+    transition: all 1s ease-in-out;
+    /* transform: translateX(-150);
+    transform: translateX(150);
+    transition: ease-in 3s; */
 }
 .endGame{
     position: absolute;
@@ -93,13 +96,13 @@ span{
     width: 600px;
 }
 
-@keyframes run {
-    0% { margin-left: -98%;}
-    100%{ margin-left: 0%;}
-}
+
 
 
 /* Test */
+.anima{
+    animation: leftAndRight linear 3s infinite;
+}
 .egg {
     animation-name            : fade      , shrink    ;
     animation-duration        : 0.5s      , 0.53s     ;
@@ -107,14 +110,7 @@ span{
     animation-direction       : alternate , alternate ;
     width: 20%;
 }
-@keyframes fade {
-    from { opacity   : 1; }
-    to   { opacity   : 0.25; }
-}
-@keyframes shrink {
-    from { transform : scale(1); }
-    to   { transform : scale(0.75); }
-}
+
 
 /* activeButtons */
 .bottom{
@@ -137,3 +133,30 @@ span{
 .hidden {
     display: none;
 }
+
+/* animations */
+
+
+@keyframes fade {
+    from { opacity   : 1; }
+    to   { opacity   : 0.25; }
+}
+@keyframes shrink {
+    from { transform : scale(1); }
+    to   { transform : scale(0.75); }
+}
+
+@keyframes leftAndRight {
+    0% {
+    transform: translateX(200px) ;
+    }
+    49% {
+    transform: translateX(-200px) ;
+    }
+        50% {
+    transform: translateX(-200px);
+    }
+    100% {
+    transform: translateX(200px);
+    }
+}    

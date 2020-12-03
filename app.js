@@ -117,8 +117,9 @@ const gameTime = function gameTime(){
         clearInterval(HealthTimer);
         $("img").attr("src", "images/ gothicvania patreon collection/demon-Files/GIFS/demon-attack.gif")
         $("section").append(`<img class='endGame' id="win" src='images/winText.png'>`)
+        $("img").removeClass("anima")
         }
-    }, 200);
+    }, 400);
 }
 
 
@@ -136,6 +137,7 @@ $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GI
 const endGame = function endGame(){
     $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif") 
     console.log("game over"); 
+    $("img").removeClass("anima")
 }
 
 const gameDecay = function gameDecay(){
