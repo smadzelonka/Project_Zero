@@ -95,7 +95,6 @@ $(".nes-btn").on("click",handleClick);
 $('.input').on('submit', handleSubmit);
 
 
-
 // decay of health
 const gameTime = function gameTime(){
     let HealthTimer = setInterval(() => {
@@ -117,7 +116,7 @@ const gameTime = function gameTime(){
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         endGame()
-        $("section").append(`<img class='endGame' src='images/winText.png'>`)
+        $("section").append(`<img class='endGame' id="win" src='images/winText.png'>`)
         }
     }, 200);
 }
