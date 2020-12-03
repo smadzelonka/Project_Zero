@@ -45,16 +45,25 @@ const handleClick = function handleClick(event){
 }
 
 
+const foodDecay = function foodDecay(){
+    pet.hunger += .5;
+    $hunger.val(pet.hunger)
+}
+const thirstDecay = function thirstDecay(){
+    pet.thirst += .5;
+    $thirst.val(pet.thirst)
+}
+const emotionDecay = function emotionalDecay(){
+    pet.emotion += .5;
+    $emotion.val(pet.emotion)
+}
+
 const feedButton = function feedButton(){
 /*     let foodValue = $("#foodBar").val();
     let newFoodValue = Number(foodValue) + 5;
     $("#foodBar").val(newFoodValue); */
     pet.hunger += 5;
     $hunger.val(pet.hunger)
-    pet.emotion -= .5;
-    $emotion.val(pet.emotion)
-    pet.thirst -= .1;
-    $thirst.val(pet.thirst)
 }
 const thirstButton = function thirstButton(){
 /*     let thirstValue = $("#drinkBar").val();
@@ -62,10 +71,6 @@ const thirstButton = function thirstButton(){
     $("#drinkBar").val(newThirstValue); */
     pet.thirst += 5;
     $thirst.val(pet.thirst)
-    pet.emotion -= .1;
-    $emotion.val(pet.emotion)
-    pet.hunger -= .5;
-    $hunger.val(pet.hunger)
 }
 
 const emotionButton = function emotionButton(){
@@ -74,10 +79,6 @@ const emotionButton = function emotionButton(){
     $(".emotionalBar").val(newEmotionalValue); */
     pet.emotion += 5;
     $emotion.val(pet.emotion)
-    pet.thirst -= .5;
-    $thirst.val(pet.thirst)
-    pet.hunger -= 1;
-    $hunger.val(pet.hunger)
 }
 
 const handleSubmit =function handleSubmit(e){
@@ -98,16 +99,25 @@ $('.input').on('submit', handleSubmit);
 const decayTime = function decayTime(){
     let HealthTimer = setInterval(() => {
         pet.health++
+        gameDecay()
         $health.val(pet.health)
-
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
-        $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif")
-        $("section").append("<img class='endGame' src='images/gameover.gif'>")
-        console.log("game over");
+        endGame()
         }
-    }, 1000);
+    }, 200);
 }
 
 
 // add anmations end game
+const endGame = function endGame(){
+    $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif")
+    $("section").append("<img class='endGame' src='images/gameover.gif'>")
+    console.log("game over");
+}
+
+const gameDecay = function gameDecay(){
+    foodDecay();
+    emotionDecay();
+    thirstDecay();
+}
