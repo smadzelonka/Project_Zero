@@ -94,6 +94,10 @@ section{
     text-align: center;
 }
 
+.nes-btn{
+    font-family: 'Press Start 2P', cursive;
+}
+
 /* preGame */
 
 .hidden {

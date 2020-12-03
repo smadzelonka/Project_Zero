@@ -47,15 +47,15 @@ const handleClick = function handleClick(event){
 
 
 const foodDecay = function foodDecay(){
-    pet.hunger += 1;
+    pet.hunger += 1.5;
     $hunger.val(pet.hunger)
 }
 const thirstDecay = function thirstDecay(){
-    pet.thirst += 1;
+    pet.thirst += 1.5;
     $thirst.val(pet.thirst)
 }
 const emotionDecay = function emotionalDecay(){
-    pet.emotion += 1;
+    pet.emotion += 1.5;
     $emotion.val(pet.emotion)
 }
 
@@ -81,7 +81,7 @@ const emotionButton = function emotionButton(){
     pet.emotion -= 5;
     $emotion.val(pet.emotion)
 }
-
+/* get user name */
 const handleSubmit =function handleSubmit(e){
     e.preventDefault();
     const inputValue = $(".nes-input").val()
@@ -101,22 +101,23 @@ const gameTime = function gameTime(){
     let HealthTimer = setInterval(() => {
         pet.health++
         gameDecay()
-        if(pet.thirst === 100 || pet.hunger === 100 || pet.emotion === 100){
-        endGame()
-        clearInterval(HealthTimer);
+
+        if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
+        earlyGame()
         }
         if(pet.thirst === 50 || pet.hunger === 50 || pet.emotion === 50){
         midGame()
         }
-        if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
-        earlyGame()
+        if(pet.thirst === 100 || pet.hunger === 100 || pet.emotion === 100){
+        endGame()
+        clearInterval(HealthTimer);
         }
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         endGame()
         }
-    }, 200);
+    }, 400);
 }
 
 
