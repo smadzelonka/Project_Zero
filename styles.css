@@ -73,6 +73,11 @@ section{
     justify-content: center;
     text-align: center;
 }
+.endGame{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
 
 /* activeButtons */
 .bottom{

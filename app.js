@@ -103,6 +103,7 @@ const decayTime = function decayTime(){
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif")
+        $("section").append("<img class='endGame' src='images/gameover.gif'>")
         console.log("game over");
         }
     }, 1000);
