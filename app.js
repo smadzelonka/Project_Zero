@@ -29,6 +29,7 @@ const handleClick = function handleClick(event){
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
         console.log("You've been submited")
+        $(".health, .hunger, .thirst, .emotion, .image_Container, .bottom").removeClass("hidden")
         gameTime()
     }else if ($target.hasClass("liquid")){
         console.log("Water please")
