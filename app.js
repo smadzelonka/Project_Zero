@@ -115,7 +115,7 @@ const gameTime = function gameTime(){
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
-        endGame()
+        $("img").attr("src", "images/ gothicvania patreon collection/demon-Files/GIFS/demon-attack.gif")
         $("section").append(`<img class='endGame' id="win" src='images/winText.png'>`)
         }
     }, 200);

@@ -78,6 +78,7 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: run ease 3s;
 }
 .endGame{
     position: absolute;
@@ -89,6 +90,10 @@ section{
     width: 600px;
 }
 
+@keyframes run {
+  0% { margin-left: -98%;}
+  100%{ margin-left: 0%;}
+}
 
 /* activeButtons */
 .bottom{
