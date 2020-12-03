@@ -45,6 +45,20 @@ const handleClick = function handleClick(event){
     }
 }
 
+const handleKeys = function handleKeys(e){
+    var key = (e.key)
+    console.log(e)
+    if(key === "f"){
+        feedButton()
+    }else if(key === "l"){
+        thirstButton()
+    }else if(key === "e"){
+        emotionButton()
+    }else{
+        console.log("hello there you pressed me one to many times")
+    }
+}
+
 
 const foodDecay = function foodDecay(){
     pet.hunger += 1.5;
@@ -93,6 +107,8 @@ const handleSubmit =function handleSubmit(e){
 $(".nes-btn").on("click",handleClick);
 // need to move submit from handleclick
 $('.input').on('submit', handleSubmit);
+// handlesKey
+$('body').on( "keydown", handleKeys )
 
 
 // decay of health

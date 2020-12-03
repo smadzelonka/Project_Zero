@@ -66,8 +66,6 @@ span{
     display:none;
 }
 
-
-
 .image_Container{
     width: 100%;
     display: flex;
@@ -82,9 +80,6 @@ span{
     justify-content: center;
     text-align: center;
     transition: all 1s ease-in-out;
-    /* transform: translateX(-150);
-    transform: translateX(150);
-    transition: ease-in 3s; */
 }
 .endGame{
     position: absolute;
@@ -96,10 +91,6 @@ span{
     width: 600px;
 }
 
-
-
-
-/* Test */
 .anima{
     animation: leftAndRight linear 3s infinite;
 }
