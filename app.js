@@ -47,15 +47,15 @@ const handleClick = function handleClick(event){
 
 
 const foodDecay = function foodDecay(){
-    pet.hunger += .5;
+    pet.hunger += 1;
     $hunger.val(pet.hunger)
 }
 const thirstDecay = function thirstDecay(){
-    pet.thirst += .5;
+    pet.thirst += 1;
     $thirst.val(pet.thirst)
 }
 const emotionDecay = function emotionalDecay(){
-    pet.emotion += .5;
+    pet.emotion += 1;
     $emotion.val(pet.emotion)
 }
 
@@ -105,6 +105,12 @@ const gameTime = function gameTime(){
         endGame()
         clearInterval(HealthTimer);
         }
+        if(pet.thirst === 50 || pet.hunger === 50 || pet.emotion === 50){
+        midGame()
+        }
+        if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
+        earlyGame()
+        }
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
@@ -114,7 +120,16 @@ const gameTime = function gameTime(){
 }
 
 
-// add anmations end game
+// add anmations game
+
+const earlyGame = function earlyGame(){
+$("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-idle.gif")
+}
+
+const midGame = function midGame(){
+$("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-breath.gif")
+}
+
 const endGame = function endGame(){
     $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/without-stroke/hell-beast-burn.gif")
     $("section").append("<img class='endGame' src='images/gameover.gif'>")
