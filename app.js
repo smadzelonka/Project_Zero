@@ -8,6 +8,9 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
+const modal = document.getElementById('dialog-dark-rounded').showModal();
+
+
 // values
 const $health = $("#healthBar")
 const $hunger = $("#foodBar")
@@ -154,3 +157,4 @@ const gameDecay = function gameDecay(){
 }
 
 // global runs
+

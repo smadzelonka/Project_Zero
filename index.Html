@@ -44,7 +44,7 @@
         </div>
     </nav> 
     <!-- tomagotchi unit -->
-    <section>
+    <section class="sectionGameUnit">
         <!-- input -->
         <form class="nes-field input">
             <span class="nes-text is-disabled">Your Pet's name</span>
@@ -55,7 +55,19 @@
             <div class="image_Container hidden">
                 <img class="image egg anima" src="images/egg.png" alt="Hell-Beast">
             </div>
-
+    </section>
+    <!-- modal game prompt -->
+    <section id="modalBox">
+    <dialog class="nes-dialog is-dark is-rounded modal" id="dialog-dark-rounded">
+        <form method="dialog">
+            <p class="title">The world ender</p>
+            <p>Take care of your monster before he end the world.</p>
+            <menu class="dialog-menu">
+            <button class="nes-btn">Cancel</button>
+            <button class="nes-btn is-primary">Confirm</button>
+        </menu>
+        </form>
+    </dialog>
     </section>
 
     <!-- actions -->

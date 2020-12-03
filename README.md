@@ -6,9 +6,11 @@ The goal of this game is to be able to create your own monster that will destory
         1. health shall decay based on time
         2. hunger shall decay feeding should decay thirst
         3. thirst shall decay and drinking decay emotion
-            1. Hunger Thirst and emotion shell give a point to health at 100 win condition will be met and animation will destory world
+            1. health at 100 will trigger win, win condition will be met and animation will destory world(but not you shhh...)
 2. create a prompt alert to be able to gather name of animation
     1. display name of animation in header center replacing the tomagtchi name
+
+    iceboxs: Game load screen of modal prompt, and svg expolsions on losing game
 ## project goal to mimic
 ![tomagotchi](images/tamagotchi.webp)
 

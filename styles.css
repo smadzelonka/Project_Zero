@@ -50,20 +50,22 @@ h1 {
 }
 
 /* tomagotchi */
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; 
-    width: 100vw;
-    height: 90vh;
-}
+
 span{
     font-size: 3rem;
 }
 
 #nameIdDiv{
     display:none;
+}
+
+.sectionGameUnit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    width: 100vw;
+    height: 90vh;
 }
 
 .image_Container{
@@ -73,6 +75,7 @@ span{
     justify-content: center;
     text-align: center;
 }
+
 .image{
     width: 1000px;
     display: flex;
@@ -81,6 +84,7 @@ span{
     text-align: center;
     transition: all 1s ease-in-out;
 }
+
 .endGame{
     position: absolute;
     align-items: center;
@@ -100,6 +104,17 @@ span{
     animation-iteration-count : infinite  , infinite  ;
     animation-direction       : alternate , alternate ;
     width: 20%;
+}
+
+/* modal */
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+   margin-top: -150px; */
 }
 
 
