@@ -47,12 +47,12 @@ const handleClick = function handleClick(event){
 
 const handleKeys = function handleKeys(e){
     var key = (e.key)
-    console.log(e)
-    if(key === "f"){
+    // used cvb for easy access
+    if(key === "1"){
         feedButton()
-    }else if(key === "l"){
+    }else if(key === "2"){
         thirstButton()
-    }else if(key === "e"){
+    }else if(key === "3"){
         emotionButton()
     }else{
         console.log("hello there you pressed me one to many times")
@@ -111,12 +111,11 @@ $('.input').on('submit', handleSubmit);
 $('body').on( "keydown", handleKeys )
 
 
-// decay of health
+// Game Time
 const gameTime = function gameTime(){
     let HealthTimer = setInterval(() => {
         pet.health++
         gameDecay()
-
         if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
         earlyGame()
         }
@@ -148,6 +147,7 @@ $("img").removeClass("egg")
 
 const midGame = function midGame(){
 $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-breath.gif")
+$("img").removeClass("egg")
 }
 
 const endGame = function endGame(){
