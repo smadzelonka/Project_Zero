@@ -73,7 +73,6 @@ const handleClick = function handleClick(event){
     const $target = $(event.target)
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
-        console.log("You've been submited")
         earlyGame()
         $(".health, .hunger, .thirst, .emotion, .image_Container, .bottom").removeClass("hidden")
         gameTime()
@@ -168,7 +167,7 @@ const gameTime = function gameTime(){
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         $("img").attr("src", "images/ gothicvania patreon collection/demon-Files/GIFS/demon-attack.gif")
-        $("section").append(`<img class='endGame' id="win" src='images/winText.png'>`)
+        $("sectionGameUnit").append(`<img class='endGame' id="win" src='images/winText.png'>`)
         $("img").removeClass("anima")
         }
     }, 400);
