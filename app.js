@@ -14,7 +14,6 @@ let pos = 0;
 let speed =50;
 let str = `Take care of your monster before he ends the world. In this game the world is 2021, and everyone has gone mad by staying inside way too much. Out of such anguish revieved a creature of unstopable power with an intention on ending the world. But you were just cleared to go out side so.... feed, water and give love to your monster with the buttons or pressing 1 2 3 respectivly so you can finally enjoy your fun in the sun.`
 
-
 document.getElementById('story').innerText = '';
 function type() {
     // for(let i=0; i < str.length; i++) {
@@ -29,6 +28,19 @@ function type() {
     }
 }
 setTimeout(type,speed)
+
+// music
+$(".btn .fa-play").on("click", function(){
+    $(this).hide();
+    $(".fa-pause").fadeIn();
+    $("#bg-music")[0].play();
+});
+
+$(".btn .fa-pause").on("click", function(){
+    $(this).hide();
+    $(".fa-play").fadeIn();
+    $("#bg-music")[0].pause();
+});
 
 // values
 const $health = $("#healthBar")
