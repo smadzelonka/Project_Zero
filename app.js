@@ -8,8 +8,27 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
+// modal
 const modal = document.getElementById('dialog-dark-rounded').showModal();
+let pos = 0;
+let speed =50;
+let str = `Take care of your monster before he ends the world. In this game the world is 2021, and everyone has gone mad by staying inside way too much. Out of such anguish revieved a create of unstopable power with an intention on ending the world. But you were just cleared to go out side so...., feed, water and give love to your monster with the buttons or pressing 1 2 3 respectivly so you can finally enjoy your fun in the sun.`
 
+
+document.getElementById('story').innerText = '';
+function type() {
+    // for(let i=0; i < str.length; i++) {
+    //     document.getElementById('story').innerHTML += str.charAt(i);
+        
+    //     setTimeout(type,speed)
+    // }
+    if(pos<str.length){
+        document.getElementById('story').innerHTML += str.charAt(pos);
+        pos++;
+        setTimeout(type,speed)
+    }
+}
+setTimeout(type,speed)
 
 // values
 const $health = $("#healthBar")

@@ -111,11 +111,22 @@ span{
     width: 100vw;
     height: 100vh;
     position: absolute;
-    /* left: 50%;
-    top: 50%; 
-    margin-left: -150px;
-   margin-top: -150px; */
 }
+
+/* p{
+    animation: type 3s steps(433);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 433;
+}
+@keyframes type {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 433ch;
+    }
+} */
 
 
 /* activeButtons */
