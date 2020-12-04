@@ -113,20 +113,9 @@ span{
     position: absolute;
 }
 
-/* p{
-    animation: type 3s steps(433);
-    overflow: hidden;
-    white-space: nowrap;
-    width: 433;
+.title{
+    margin: 20px;
 }
-@keyframes type {
-    0%{
-        width: 0ch;
-    }
-    100%{
-        width: 433ch;
-    }
-} */
 
 
 /* activeButtons */
