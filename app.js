@@ -160,14 +160,14 @@ const gameTime = function gameTime(){
         }
         if(pet.thirst === 100 || pet.hunger === 100 || pet.emotion === 100){
         endGame()
-        $("section").append(`<img class='endGame' src='images/gameover.gif'>`)
+        $(".sectionGameUnit").append(`<img class='endGame' src='images/gameover.gif'>`)
         clearInterval(HealthTimer);
         }
         $health.val(pet.health)
         if (pet.health >= 100) {
         clearInterval(HealthTimer);
         $("img").attr("src", "images/ gothicvania patreon collection/demon-Files/GIFS/demon-attack.gif")
-        $("sectionGameUnit").append(`<img class='endGame' id="win" src='images/winText.png'>`)
+        $(".sectionGameUnit").append(`<img class='endGame' id="win" src='images/winText.png'>`)
         $("img").removeClass("anima")
         }
     }, 400);
