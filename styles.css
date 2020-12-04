@@ -116,6 +116,9 @@ span{
 .title{
     margin: 20px;
 }
+#story{
+    text-align: left;
+}
 
 
 /* activeButtons */
