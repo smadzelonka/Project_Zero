@@ -8,6 +8,16 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
+// fade
+$('.btn-modal').on('click', function() {
+$('.overlay').animate({
+    opacity: 1,
+}, 5000, function() {
+        // Animation complete.
+    });
+}); 
+
+
 // modal
 const modal = document.getElementById('dialog-dark-rounded').showModal();
 let pos = 0;

@@ -193,3 +193,19 @@ span{
     transform: translateX(200px);
     }
 }    
+
+
+
+
+/* testing */
+.fade-in {
+animation: fadeIn ease 3s;
+animation-duration: 0.5s;    
+animation-iteration-count: 3;
+}
+
+/* t key */
+@keyframes fadeIn {
+0% {opacity:1;}
+100% {opacity:0;}
+}
