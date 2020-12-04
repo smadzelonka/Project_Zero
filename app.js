@@ -9,11 +9,12 @@
 // 3. 
 
 // fade
-$('.btn-modal').on('click', function() {
+$('.feed').on('click', function() {
 $('.overlay').animate({
     opacity: 1,
 }, 5000, function() {
         // Animation complete.
+        
     });
 }); 
 
@@ -73,6 +74,7 @@ const handleClick = function handleClick(event){
     if($target.hasClass("submit")){
         $(".nes-field").attr("id", "nameIdDiv")
         console.log("You've been submited")
+        earlyGame()
         $(".health, .hunger, .thirst, .emotion, .image_Container, .bottom").removeClass("hidden")
         gameTime()
     }else if ($target.hasClass("liquid")){
@@ -151,9 +153,9 @@ const gameTime = function gameTime(){
     let HealthTimer = setInterval(() => {
         pet.health++
         gameDecay()
-        if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
-        earlyGame()
-        }
+        // if(pet.thirst === 25 || pet.hunger === 25 || pet.emotion === 25){
+        // earlyGame()
+        // }
         if(pet.thirst === 50 || pet.hunger === 50 || pet.emotion === 50){
         midGame()
         }

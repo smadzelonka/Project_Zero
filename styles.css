@@ -104,6 +104,7 @@ span{
     animation-iteration-count : infinite  , infinite  ;
     animation-direction       : alternate , alternate ;
     width: 20%;
+    z-index: -1;
 }
 
 /* modal */
@@ -198,14 +199,14 @@ span{
 
 
 /* testing */
-.fade-in {
+/* .fade-in {
 animation: fadeIn ease 3s;
 animation-duration: 0.5s;    
 animation-iteration-count: 3;
-}
+} */
 
 /* t key */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
 0% {opacity:1;}
 100% {opacity:0;}
-}
+} */
