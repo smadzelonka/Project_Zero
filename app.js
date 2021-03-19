@@ -8,6 +8,11 @@
 //     1. display name of animation in header center replacing the tomagtchi name
 // 3. 
 
+
+
+
+
+
 // fade
 $('.feed').on('click', function() {
 $('.overlay').animate({
@@ -184,6 +189,7 @@ $("img").removeClass("egg")
 const midGame = function midGame(){
 $("img").attr("src", "images/ gothicvania patreon collection/Hell-Beast-Files/GIF/with-stroke/hell-beast-breath.gif")
 $("img").removeClass("egg")
+
 }
 
 const endGame = function endGame(){
@@ -200,3 +206,4 @@ const gameDecay = function gameDecay(){
 
 // global runs
 
+// $('.image').css('transform', 'scale('2')');
